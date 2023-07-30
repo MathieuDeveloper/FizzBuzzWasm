@@ -1,12 +1,28 @@
-﻿<div class="row row-cols-2 row-cols-md-5">
-    @for (int i = 1; i <=<Count; i++)
+﻿
+<div class="row row-cols-2 row-cols-md-5">
+    @for (int i = 1; i <= Count; i++)
     {
         <div class="col g-2">
-            <div class="bg-secondary p-2 text-center">
+            <div class="bg-secondary p-2 text-center border border-dark border-2">
+                @if (i % FizzValue != 0 && i % BuzzValue !=0)
+                {
+                    <span>@i</span>
+                }
+                else
+                {
+                    if (i % FizzValue == 0)
+                    {
+                        <span class="text-fizz">Fizz</span>
+                    }
 
-            </div>
+                    if (i % BuzzValue == 0)
+                    {
+                        <span class="text-buzz">Buzz</span>
+                    }
 
+                }
             </div>
+        </div>
     }
 
 </div>
